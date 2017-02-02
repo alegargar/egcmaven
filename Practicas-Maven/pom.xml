@@ -17,13 +17,27 @@
   </dependencies>
   <build>
     <plugins>
-
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-assembly-plugin</artifactId>
-        <version>3.0.0</version>
-      </plugin>
+        <artifactId>maven-pmd-plugin</artifactId>
+        <version>3.7</version>
+        <configuration>
+          <!-- Codificación del código fuente -->
+          <sourceEncoding>utf-8</sourceEncoding>
+        <!--
+        	Se indican los informes que se desean
+         -->
+        <reportSets>
+          <reportSet>
+            <reports>
+      				<report>pmd</report>
+      				<report>cpd</report>
+            </reports>
+          </reportSet>
+        </reportSets>
+        </configuration>
 
+      </plugin>
     </plugins>
   </build>
-</project>
+</project>s
